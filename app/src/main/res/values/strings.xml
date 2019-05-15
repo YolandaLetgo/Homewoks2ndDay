@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Perritos</string>
+    <string name="tvTittle">Add your dog information</string>
+    <string name="tvName">Nombre</string>
+    <string name="etName">Name</string>
+    <string name="tvege">Edad</string>
+    <string name="etEge">Edad</string>
+    <string name="tvSize">Tamaño</string>
+    <string name="btnAddDog">Add Dog</string>
+    <string name="btnHugeDog">Huge dog</string>
+    <string name="btnTiny">Tiny Dog</string>
+    <string name="tvRaza">Raza</string>
+    <string name="hairless">American Hairless Terrier</string>
+    <string name="tinydog">The American Hairless Terrier is a rare breed of dog that was derived as a variant of Rat Terrier. As of January 1, 2004, the United Kennel Club deemed the AHT a separate terrier breed, granting it full UKC recognition. An intelligent, social and energetic working breed, the American Hairless Terrier is often listed as a potential good breed choice for allergy sufferers.</string>
+    <string name="staffordshire">Staffordshire terrier</string>
+    <string name="hugegod">The American Staffordshire Terrier, also known as the Amstaff (in the United States), is a medium-sized, short-coated American dog breed.[2][3][4] In the early part of the twentieth century the breed gained social stature and was accepted by the American Kennel Club in 1936 and should not be confused with the Staffordshire Bull Terrier of the United Kingdom.</string>
+    <string name="tvPhoto">Photo:</string>
+    <string name="btnPhoto">Take a photo</string>
+    <string name="btnSave">Save doggo</string>
+    <string-array name="lbSpinnerSize">
+        <item>Tiny</item>
+        <item>Small</item>
+        <item>Big</item>
+        <item>Huge</item>
+    </string-array>
+    <string-array name="lbSpinnerRaza">
+        <item>American Hairless Terrier</item>
+        <item>Perro crestado chino</item>
+        <item>Perro sin pelo del perú </item>
+        <item>Xoloitzcuintle</item>
+    </string-array>
+</resources>
