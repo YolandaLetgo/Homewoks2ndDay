@@ -1,13 +1,15 @@
 package com.example.perritos
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_form.*
 
 
-class MainActivity : AppCompatActivity() {
+class AddDoggoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +39,20 @@ class MainActivity : AppCompatActivity() {
     fun onClickTinyDog(view: View) {
         val tinydogIntent = Intent(this, btnTinyDog::class.java)
         startActivity(tinydogIntent)
+    }
+
+    fun onClickTakePhoto(view: View) {
+        val takephotoIntent = Intent(this, btnPhoto::class.java)
+        startActivity(takephotoIntent)
+
+    }
+
+    private fun displayDogInfo(name: String, age: String, size: String, photo: Bitmap) {
+        var intent = Intent(this, ShowDoggoActivity::class.java)
+        intent.putExtra(NAME_FIELD,name)
+        ...
+        intent.putExtra(PHOTO_FIELD,photo)
+        startActivity(intent)
     }
 }
 

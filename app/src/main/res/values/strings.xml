@@ -17,6 +17,8 @@
     <string name="tvPhoto">Photo:</string>
     <string name="btnPhoto">Take a photo</string>
     <string name="btnSave">Save doggo</string>
+    <string name="tvNewDogAdded">Your dog Information</string>
+    <string name="btnDone">DONE</string>
     <string-array name="lbSpinnerSize">
         <item>Tiny</item>
         <item>Small</item>

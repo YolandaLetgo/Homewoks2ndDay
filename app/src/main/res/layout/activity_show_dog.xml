@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ShowDogActivity">
 
     <TextView
         android:id="@+id/tvTittle"
@@ -12,7 +13,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/tvTittle"
+        android:text="@string/tvNewDogAdded"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
@@ -32,17 +33,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTittle" />
 
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="328dp"
+    <TextView
+        android:id="@+id/tvNameResult"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="@string/etName"
-        android:inputType="textPersonName"
-        android:text="@string/etName"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvName"
         app:layout_constraintTop_toBottomOf="@+id/tvTittle" />
@@ -56,25 +55,22 @@
         android:text="@string/tvege"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
-
-    <EditText
-        android:id="@+id/etEdge"
-        android:layout_width="323dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/tvName"
-        android:inputType="number"
-        android:text="@string/etEge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toEndOf="@+id/tvEge"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNameResult" />
 
     <TextView
-        android:id="@+id/tvRaza"
+        android:id="@+id/tvEgeResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameResult" />
+
+    <TextView
+        android:id="@+id/tvRace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -83,45 +79,39 @@
         android:textColorHint="@color/Grey"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEdge" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEgeResult" />
 
-    <Spinner
-        android:id="@+id/lbSpinnerRaza"
-        android:layout_width="296dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="8dp"
+    <TextView
+        android:id="@+id/tvRaceResult"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:labelFor="@id/lbSpinnerRaza"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toEndOf="@+id/tvRaza"
-        app:layout_constraintTop_toBottomOf="@+id/etEdge" />
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvEgeResult" />
 
     <TextView
         android:id="@+id/tvSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/tvSize"
         android:textColorHint="@color/Grey"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbSpinnerRaza" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRaceResult" />
 
-    <Spinner
-        android:id="@+id/lbSpinnerSize"
-        android:layout_width="323dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="8dp"
+    <TextView
+        android:id="@+id/tvSizeResult"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:labelFor="@id/lbSpinnerSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toEndOf="@+id/tvSize"
-        app:layout_constraintTop_toBottomOf="@+id/lbSpinnerRaza" />
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvRaceResult" />
 
     <TextView
         android:id="@+id/tvPhoto"
@@ -132,29 +122,30 @@
         android:text="@string/tvPhoto"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbSpinnerSize"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvSizeResult" />
 
-    <Button
-        android:id="@+id/btnPhoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/btnPhoto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toEndOf="@+id/tvPhoto"
-        app:layout_constraintTop_toBottomOf="@+id/lbSpinnerSize" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="204dp"
         android:layout_height="50dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/btnSave"
+        android:text="@string/btnDone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="256dp"
+        android:layout_height="330dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSizeResult" />
 
 </android.support.constraint.ConstraintLayout>
