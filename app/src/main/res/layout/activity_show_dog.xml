@@ -10,9 +10,10 @@
         android:id="@+id/tvTittle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:ems="10"
         android:text="@string/tvNewDogAdded"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
@@ -47,18 +48,18 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTittle" />
 
     <TextView
-        android:id="@+id/tvEge"
+        android:id="@+id/tvAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/tvege"
+        android:text="@string/tvage"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNameResult" />
 
     <TextView
-        android:id="@+id/tvEgeResult"
+        android:id="@+id/tvAgeResult"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -70,26 +71,28 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNameResult" />
 
     <TextView
-        android:id="@+id/tvRace"
+        android:id="@+id/tvBreed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/tvRaza"
+        android:text="@string/tvBreed"
         android:textColorHint="@color/Grey"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEgeResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAgeResult" />
 
     <TextView
-        android:id="@+id/tvRaceResult"
+        android:id="@+id/tvBreedResult"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:ems="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/tvEgeResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAgeResult" />
 
     <TextView
         android:id="@+id/tvSize"
@@ -101,17 +104,44 @@
         android:textColorHint="@color/Grey"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRaceResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBreedResult" />
 
     <TextView
         android:id="@+id/tvSizeResult"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:ems="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/tvRaceResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBreedResult" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvGender"
+        android:textColorHint="@color/Grey"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSizeResult" />
+
+    <TextView
+        android:id="@+id/tvGenderResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvSizeResult" />
+
 
     <TextView
         android:id="@+id/tvPhoto"
@@ -122,7 +152,7 @@
         android:text="@string/tvPhoto"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSizeResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvGenderResult" />
 
 
     <Button
@@ -136,9 +166,9 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="256dp"
-        android:layout_height="330dp"
+        android:id="@+id/imgResult"
+        android:layout_width="233dp"
+        android:layout_height="216dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -146,6 +176,6 @@
         app:layout_constraintBottom_toTopOf="@+id/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSizeResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvGenderResult" />
 
 </android.support.constraint.ConstraintLayout>

@@ -36,23 +36,9 @@ class AddDoggoActivity : AppCompatActivity() {
 
     }
 
-    fun onClickTinyDog(view: View) {
+    fun onClickTinyDog() {
         val tinydogIntent = Intent(this, btnTinyDog::class.java)
         startActivity(tinydogIntent)
-    }
-
-    fun onClickTakePhoto(view: View) {
-        val takephotoIntent = Intent(this, btnPhoto::class.java)
-        startActivity(takephotoIntent)
-
-    }
-
-    private fun displayDogInfo(name: String, age: String, size: String, photo: Bitmap) {
-        var intent = Intent(this, ShowDoggoActivity::class.java)
-        intent.putExtra(NAME_FIELD,name)
-        ...
-        intent.putExtra(PHOTO_FIELD,photo)
-        startActivity(intent)
     }
 }
 

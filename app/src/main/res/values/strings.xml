@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">Perritos</string>
     <string name="tvTittle">Add your dog information</string>
-    <string name="tvName">Nombre</string>
+    <string name="tvName">Name</string>
     <string name="etName">Name</string>
-    <string name="tvege">Edad</string>
-    <string name="etEge">Edad</string>
-    <string name="tvSize">Tamaño</string>
+    <string name="tvage">Age</string>
+    <string name="etAge">Age</string>
+    <string name="tvSize">Size</string>
     <string name="btnAddDog">Add Dog</string>
     <string name="btnHugeDog">Huge dog</string>
     <string name="btnTiny">Tiny Dog</string>
-    <string name="tvRaza">Raza</string>
+    <string name="tvBreed">Breed</string>
     <string name="hairless">American Hairless Terrier</string>
     <string name="tinydog">The American Hairless Terrier is a rare breed of dog that was derived as a variant of Rat Terrier. As of January 1, 2004, the United Kennel Club deemed the AHT a separate terrier breed, granting it full UKC recognition. An intelligent, social and energetic working breed, the American Hairless Terrier is often listed as a potential good breed choice for allergy sufferers.</string>
     <string name="staffordshire">Staffordshire terrier</string>
@@ -19,13 +19,16 @@
     <string name="btnSave">Save doggo</string>
     <string name="tvNewDogAdded">Your dog Information</string>
     <string name="btnDone">DONE</string>
+    <string name="txtMale">Male</string>
+    <string name="txtFemale">Female</string>
+    <string name="tvGender">Gender</string>
     <string-array name="lbSpinnerSize">
         <item>Tiny</item>
         <item>Small</item>
         <item>Big</item>
         <item>Huge</item>
     </string-array>
-    <string-array name="lbSpinnerRaza">
+    <string-array name="lbSpinnerBreed">
         <item>American Hairless Terrier</item>
         <item>Perro crestado chino</item>
         <item>Perro sin pelo del perú </item>
