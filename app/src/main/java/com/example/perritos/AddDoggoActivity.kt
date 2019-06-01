@@ -3,7 +3,7 @@ package com.example.perritos
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_form.*
@@ -37,7 +37,7 @@ class AddDoggoActivity : AppCompatActivity() {
     }
 
     fun onClickTinyDog() {
-        val tinydogIntent = Intent(this, btnTinyDog::class.java)
+        val tinydogIntent = Intent(this, TinyDogActivity::class.java)
         startActivity(tinydogIntent)
     }
 }

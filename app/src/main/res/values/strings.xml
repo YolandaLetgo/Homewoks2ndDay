@@ -22,6 +22,7 @@
     <string name="txtMale">Male</string>
     <string name="txtFemale">Female</string>
     <string name="tvGender">Gender</string>
+    <string name="btnSeeMore">See more doggos</string>
     <string-array name="lbSpinnerSize">
         <item>Tiny</item>
         <item>Small</item>

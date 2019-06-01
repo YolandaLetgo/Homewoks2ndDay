@@ -6,7 +6,7 @@ import android.media.Image
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.provider.MediaStore
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_form.*
@@ -65,15 +65,15 @@ class FormActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         }
     }
     fun onClickTakePhoto(view: View) {
-        val takephotoIntent = Intent(this, btnPhoto::class.java)
-        startActivity(takephotoIntent)
+        dispatchTakePictureIntent()
+
 
     }
 
     val REQUEST_IMAGE_CAPTURE = 1
 
-    private fun dispatchTakePictureIntent() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
+    private fun dispatchTakePictureIntent():Intent {
+        return Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
             takePictureIntent.resolveActivity(packageManager)?.also {
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
             }
@@ -83,7 +83,7 @@ class FormActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as Bitmap
-            imageView.setImageBitmap(imageBitmap)
+            imgDog.setImageBitmap(imageBitmap)
         }
     }
 
@@ -100,6 +100,8 @@ class FormActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         val sizeArray = resources.getStringArray(R.array.lbSpinnerSize)
         val positionSize = lbSpinnerSize.selectedItemPosition
         val size = sizeArray[positionSize]
+
+
 
 
         displayDog(name, age, breed, size, gender)
