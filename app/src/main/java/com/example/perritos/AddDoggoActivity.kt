@@ -22,7 +22,9 @@ class AddDoggoActivity : AppCompatActivity() {
         btnHugeDog.setOnClickListener {
             onClickHugeDog()
         }
-
+        btnTinyDog.setOnClickListener {
+            onClickTinyDog()
+        }
     }
 
     fun onClickFormActivity(view: View) {
@@ -36,7 +38,7 @@ class AddDoggoActivity : AppCompatActivity() {
 
     }
 
-    fun onClickTinyDog() {
+    private fun onClickTinyDog() {
         val tinydogIntent = Intent(this, TinyDogActivity::class.java)
         startActivity(tinydogIntent)
     }
