@@ -35,4 +35,5 @@
         <item>Perro sin pelo del perú </item>
         <item>Xoloitzcuintle</item>
     </string-array>
+    <string name="title_activity_doggos_list">DoggosList</string>
 </resources>

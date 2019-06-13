@@ -145,7 +145,7 @@
 
             <RadioButton
                 android:id="@+id/rbMale"
-                android:layout_width="141dp"
+                android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:onClick="onRadioButtonClicked"
                 android:text="@string/txtMale" />

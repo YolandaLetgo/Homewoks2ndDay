@@ -1,12 +1,10 @@
 package com.example.perritos
 
 import android.content.Intent
-import android.graphics.Bitmap
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_form.*
 
 
 class AddDoggoActivity : AppCompatActivity() {
@@ -15,7 +13,6 @@ class AddDoggoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initListeners()
-
     }
 
     private fun initListeners() {
@@ -24,6 +21,9 @@ class AddDoggoActivity : AppCompatActivity() {
         }
         btnTinyDog.setOnClickListener {
             onClickTinyDog()
+        }
+        btnSeeMore.setOnClickListener {
+            onClickSeeMore()
         }
     }
 
@@ -41,6 +41,11 @@ class AddDoggoActivity : AppCompatActivity() {
     private fun onClickTinyDog() {
         val tinydogIntent = Intent(this, TinyDogActivity::class.java)
         startActivity(tinydogIntent)
+    }
+
+    private fun onClickSeeMore() {
+        val seemoreIntent = Intent(this, DoggosListActivity::class.java)
+        startActivity(seemoreIntent)
     }
 }
 
